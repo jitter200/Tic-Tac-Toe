@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  
+  <h1>Tic-Tac-Toe</h1>
+  <div class="mode-switch">
+    
+    <div class="mode-btn" id="onepMode" data-mode="pve">
+      <img src="onep_icon.png" alt="1P" class="mode-icon">
+    </div>
+    
+    
+    <div class="mode-btn" id="twopMode" data-mode="pvp">
+      <img src="twop_icon.png" alt="2P" class="mode-icon">
+    </div>
+  </div>
+  
+  <div class="scoreboard">
+    <div class="score-item">
+      <h2 id="playerLabel">PLAYER (X)</h2>
+      <div id="playerScore">0</div>
+    </div>
+    <div class="score-item">
+      <h2 id="tieLabel">TIE</h2>
+      <div id="tieScore">0</div>
+    </div>
+    <div class="score-item">
+      <h2 id="computerLabel">COMPUTER (O)</h2>
+      <div id="computerScore">0</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="board" id="board">
+      <div class="line vertical line1"></div>
+      <div class="line vertical line2"></div>
+      <div class="line horizontal line1"></div>
+      <div class="line horizontal line2"></div>
+      
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <button id="reset">Reset</button>
+    <div id="status"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.score-item {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.score-item h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.score-item div {
+  font-size: 24px;
+}
+
+/* Стили для переключения режима */
+.mode-switch {
+  display: flex;           /* Используем flex для горизонтального расположения */
+  justify-content: center; /* Центрируем по горизонтали */
+  margin: 20px auto;
+}
+
+.mode-btn {
+  display: flex;
+  flex-direction: row;     /* Горизонтальное расположение иконки и текста */
+  align-items: center;
+  margin: 0 15px;
+  cursor: pointer;
+  opacity: 0.5;            /* Серый цвет через прозрачность */
+  transition: opacity 0.3s;
+}
+
+.mode-btn.active {
+  opacity: 1; /* Белый (яркий) - активный */
+}
+
+.mode-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Текст 1P / 2P теперь справа от иконки */
+.mode-label {
+  font-size: 14px;
+  margin-left: 5px; /* Вместо margin-top используем margin-left для горизонтального положения */
+}
+
+/* Настройки для поля */
+.board {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background: #000;
+  margin: 20px auto;
+}
+
+.cell {
+  background: #000;
+  font-size: 180px;
+  line-height: 200px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Линии поля */
+.line {
+  position: absolute;
+  background: #fff;
+  z-index: 1;
+}
+
+.vertical {
+  width: 4px;
+  height: 100%;
+  top: 0;
+}
+
+.line1.vertical {
+  left: 33.33%;
+}
+
+.line2.vertical {
+  left: 66.66%;
+}
+
+.horizontal {
+  height: 4px;
+  width: 100%;
+  left: 0;
+}
+
+.line1.horizontal {
+  top: 33.33%;
+}
+
+.line2.horizontal {
+  top: 66.66%;
+}
+
+
+#reset {
+  margin-top: 20px;
+  background: none;      
+  border: none;         
+  color: #fff;          
+  font-weight: bold;     
+  cursor: pointer;       
+  text-align: center;    
+  
+}
+
+#reset:hover {
+  opacity: 0.8; 
+}
+
+#status {
+  margin-top: 20px;
+}
